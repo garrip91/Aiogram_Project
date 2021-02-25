@@ -18,16 +18,26 @@ def get_html(url, params=None):
 def get_content(html):
     soup = BS(html, 'html.parser')
     #items = soup.find_all('div', class_='clamp__text-expand')
-    items = soup.find_all('div', class_='desktop-channel-2-layout')
+    #items = soup.find_all('div', class_='desktop-channel-2-layout')
+    items = soup.find_all('div', class_='clamp__text-expand')
     
-    #print(items)
+    print(items)
     
-    articles = []
+    # articles = []
+    # for item in items:
+        # articles.append({
+            # 'title': item.find('div', class_='clamp__text-expand').get_text(strip=True)
+        # })
+    # print(articles)
+    titles = []
+    n = 1
     for item in items:
-        articles.append({
-            'title': item.find('div', class_='clamp__text-expand').get_text(strip=True)
+        titles.append({
+            F'title-{n}': item.find('div', class_='clamp__text-expand')
+            #.get_text(strip=True)
         })
-    print(articles)
+        n += 1
+    #print(titles)
     
 def parse():
     html = get_html(URL)
