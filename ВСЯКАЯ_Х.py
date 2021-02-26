@@ -1,0 +1,24 @@
+[
+    <a class="card-image-view-by-metrics__clickable" href="https://zen.yandex.ru/media/id/601d76de40f32972e4d8ce59/motivaciia-kak-preodolet-len-i-usvoit-novuiu-informaciiu-chtoby-stat-uspeshnym-60379764109f4c102e816a54?feed_exp=ordinary_feed&amp;from=channel&amp;rid=4219259735.484.1614326387939.47701&amp;integration=desktop_morda&amp;place=layout&amp;secdata=CMmy%2FOX9LiABMAJQD1gA" target="_blank"></a>,
+    
+    <a class="card-image-view-by-metrics__clickable" href="https://zen.yandex.ru/media/id/601d76de40f32972e4d8ce59/energiia-zachem-ona-nujna-kak-ee-sozdavat-sohraniat-i-effektivno-tratit-60366ad9084cc3452484ad62?feed_exp=ordinary_feed&amp;from=channel&amp;rid=4219259735.484.1614326387939.47701&amp;integration=desktop_morda&amp;place=layout&amp;secdata=CJHd0r79LiABMAJQD1gA" target="_blank"></a>,
+    
+    <a class="card-image-view-by-metrics__clickable" href="https://zen.yandex.ru/media/id/601d76de40f32972e4d8ce59/test-na-uroven-vashei-energii-603674c9ebccc7516111d72a?feed_exp=ordinary_feed&amp;from=channel&amp;rid=4219259735.484.1614326387939.47701&amp;integration=desktop_morda&amp;place=layout&amp;secdata=CNu20b79LiABMAJQD1gA" target="_blank"></a>,
+    
+    <a class="card-image-view-by-metrics__clickable" href="https://zen.yandex.ru/media/id/601d76de40f32972e4d8ce59/soft-skills-chto-eto-takoe-i-zachem-oni-nujny-6034e5d5084cc34524048ed5?feed_exp=ordinary_feed&amp;from=channel&amp;rid=4219259735.484.1614326387939.47701&amp;integration=desktop_morda&amp;place=layout&amp;secdata=CKL34p%2F9LiABMAJQD1gA" target="_blank"></a>,
+    
+    <a class="card-image-view-by-metrics__clickable" href="https://zen.yandex.ru/media/id/601d76de40f32972e4d8ce59/problemy-pochemu-my-preuvelichivaem-ih-znachenie-i-chto-s-etim-delat-6033c09ea332dd7373ef7d51?feed_exp=ordinary_feed&amp;from=channel&amp;rid=4219259735.484.1614326387939.47701&amp;integration=desktop_morda&amp;place=layout&amp;secdata=CPWTvev8LiABMAJQD1gA" target="_blank"></a>,
+    
+    <a class="card-image-view-by-metrics__clickable" href="https://zen.yandex.ru/media/id/601d76de40f32972e4d8ce59/mozg-pochemu-ego-neobhodimo-razvivat-na-protiajenii-vsei-jizni-6032c4a6756eeb31f0d26a71?feed_exp=ordinary_feed&amp;from=channel&amp;rid=4219259735.484.1614326387939.47701&amp;integration=desktop_morda&amp;place=layout&amp;secdata=CPDMicH8LiABMAJQD1gA" target="_blank"></a>,
+    
+    <a class="card-image-view-by-metrics__clickable" href="https://zen.yandex.ru/media/id/601d76de40f32972e4d8ce59/nastroenie-chto-eto-takoe-ot-chego-ono-zavisit-i-kak-na-nego-vliiat-6030edf3756eeb31f01efe3b?feed_exp=ordinary_feed&amp;from=channel&amp;rid=4219259735.484.1614326387939.47701&amp;integration=desktop_morda&amp;place=layout&amp;secdata=CMf%2BiJv8LiABMAJQD1gA" target="_blank"></a>,
+    
+    <a class="card-image-view-by-metrics__clickable" href="https://zen.yandex.ru/media/id/601d76de40f32972e4d8ce59/otnosheniia-kak-naiti-svoego-cheloveka-i-postroit-schastlivye-otnosheniia--602f867affa2d86ae458d81d?feed_exp=ordinary_feed&amp;from=channel&amp;rid=4219259735.484.1614326387939.47701&amp;integration=desktop_morda&amp;place=layout&amp;secdata=CMC688H8LiABMAJQD1gA" target="_blank"></a>,
+    
+    <a class="card-image-view-by-metrics__clickable" href="https://zen.yandex.ru/media/id/601d76de40f32972e4d8ce59/jelaniia-kak-poniat-chego-my-hotim-602ea4efffa2d86ae44a60b3?feed_exp=ordinary_feed&amp;from=channel&amp;rid=4219259735.484.1614326387939.47701&amp;integration=desktop_morda&amp;place=layout&amp;secdata=CPf1z9H7LiABMAJQD1gA" target="_blank"></a>,
+    
+    <a class="card-image-view-by-metrics__clickable" href="https://zen.yandex.ru/media/id/601d76de40f32972e4d8ce59/mozg-kak-im-upravliat-chtoby-dobitsia-jelaemogo-602d1bef3ad6ee787c6777a2?feed_exp=ordinary_feed&amp;from=channel&amp;rid=4219259735.484.1614326387939.47701&amp;integration=desktop_morda&amp;place=layout&amp;secdata=CNafm5z7LiABMAJQD1gA" target="_blank"></a>,
+    
+    <a class="card-image-view-by-metrics__clickable" href="https://zen.yandex.ru/media/id/601d76de40f32972e4d8ce59/doverie-chto-eto-takoe-i-kak-emu-nauchitsia-602ba9938e2e533749cdacf8?feed_exp=ordinary_feed&amp;from=channel&amp;rid=4219259735.484.1614326387939.47701&amp;integration=desktop_morda&amp;place=layout&amp;secdata=CKKEkY77LiABMAJQD1gA" target="_blank"></a>,
+    
+    <a class="card-image-view-by-metrics__clickable" href="https://zen.yandex.ru/media/id/601d76de40f32972e4d8ce59/ambicii-kak-ih-realizovat-602ac70220b7ca228d0e6dee?feed_exp=ordinary_feed&amp;from=channel&amp;rid=4219259735.484.1614326387939.47701&amp;integration=desktop_morda&amp;place=layout&amp;secdata=CJGLhdX6LiABMAJQD1gA" target="_blank"></a>]
