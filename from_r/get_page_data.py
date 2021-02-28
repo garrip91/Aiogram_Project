@@ -7,7 +7,9 @@ from out import write_xlsx
 
 
 
+#old_path = 'EXISTING_DATA.json'
 path = 'DATA.json'
+temp = 'TEMP.json'
 
 # Убираем все символы из url, начиная с "?" и далее:
 def remove_trash(data: str):
@@ -51,18 +53,20 @@ def get_page_data(filename_html: str, filename: str):
 	
     # Записываем все наши статьи в Excel-таблицу:
     write_xlsx(data_list, filename + '.xlsx')
-
+    
     # Записываем все наши статьи в json:
     with open(filename + '.json', 'w', encoding='UTF-8') as file:
         json.dump(data_list[::-1], file, ensure_ascii=False, indent=4)
-    
-    # Перезаписываем наш JSON-файл в случае наличия одинаковых элементов:
-    with open(path, encoding='UTF-8') as f:
-        existing_data = json.load(f)
-        #print(existing_data[1])
-        for i in existing_data:
-            for v in i.values():
-                print(file is f)
+    # Также записываем содержимое нашего JSON-файла в отдельный временный файл:
+#    with open('TEMP.json', 'r+', encoding='UTF-8') as f:
+#        json_data = json.loads(f.read())
+#        print(json_data)
+        #for i_1 in data_list:
+            #for i_2 in file:
+                #if i != 
+#        if len(data_list) == len(json_data):
+#            print(True)
+        #json.dump(data_list[::-1], file, ensure_ascii=False, indent=4)
 
 
 
