@@ -1,50 +1,57 @@
-# REQUIRED: 'pip install jsondiff'
 import json
-from jsondiff import diff
+
+import sqlite3
 
 
 
 path = 'DATA.json'
 temp = 'TEMP.json'
-
-# # ВТОРОЙ НАБОР ДАННЫХ ЯВЛЯЕТСЯ ВЕДУЩИМ:
-# t1 = {1:1, 2:2, 3:3, 4:{"a":"hello", "b":[1, 2, 3]}}
-# t2 = {1:1, 2:2, 3:3, 4:{"a":"hello", "b":[1, 3, 2, 3]}}
-
+'''
 path_list = []
-result_path_list = [None]
 with open(path, 'r', encoding='UTF-8') as f1:
     path_json = json.loads(f1.read())
     for i in path_json:
-        path_tuple_i = () # здесь было path_list_i = []
-        for v in i.values():
-            path_list_i.append(v)
-            path_list.append(path_list_i)
-    for i in path_list:
-        if i != result_path_list[-1]:
-            result_path_list.append(i)
-        else:
-            continue
-    del result_path_list[0]
-print(result_path_list[:10])
-
+        path_list.append(i)
+        
 temp_list = []
-result_temp_list = [None]
 with open(temp, 'r', encoding='UTF-8') as f2:
     temp_json = json.loads(f2.read())
     for i in temp_json:
-        temp_tuple_i = () # здесь было temp_list_i = []
-        for v in i.values():
-            temp_list_i.append(v)
-            temp_list.append(temp_list_i)
-    for i in temp_list:
-        if i != result_temp_list[-1]:
-            result_temp_list.append(i)
-        else:
-            continue
-    del result_temp_list[0]
-#print(result_temp_list[:10])
+        temp_list.append(i)
 
-#if (result_path_list > result_temp_list):
-    #print(list(set(path_list) - set(temp_list)))
-    #print(len(path_list - temp_list))
+result = [x for x in path_list + temp_list if x not in path_list or x not in temp_list]
+
+
+
+#with open(filename + '.json', 'w', encoding='UTF-8') as file:
+with open('DATA.json', 'w', encoding='UTF-8') as f:
+    json.dump(result, f, ensure_ascii=False, indent=4)
+    print("F{result} - ЭТИ ДАННЫЕ ЗАПИСАНЫ В ФАЙЛ DATA.json...")
+with open('TEMP.json', 'w', encoding='UTF-8') as f:
+    json.dump(result, f, ensure_ascii=False, indent=4)
+    print("F{result} - ...И ПРОДУБЛИРОВАНЫ В ФАЙЛ TEMP.json...")
+'''    
+    
+    
+db = sqlite3.connect('server.db')
+sql = db.cursor()
+
+sql.execute("""CREATE TABLE IF NOT EXISTS DATA (
+    id INT,
+    title TEXT,
+    desc TEXT,
+    url TEXT
+)""")
+
+db.commit()
+
+title = input('Title: ')
+description = input('Description: ')
+
+sql.execute('SELECT title FROM DATA')
+if sql.fetchone() is None:
+    sql.execute(F"INSERT INTO DATA VALUES ('{title}', '{description}', '{0}')")
+else:
+    print("Такая запись уже имеется!")
+
+db.close()

@@ -7,7 +7,6 @@ from out import write_xlsx
 
 
 
-#old_path = 'EXISTING_DATA.json'
 path = 'DATA.json'
 temp = 'TEMP.json'
 
@@ -51,22 +50,14 @@ def get_page_data(filename_html: str, filename: str):
         
         # ...и проходим циклом по всем статьям...
 	
-    # Записываем все наши статьи в Excel-таблицу:
-    write_xlsx(data_list, filename + '.xlsx')
+#    # Записываем все наши статьи в Excel-таблицу:
+#    write_xlsx(data_list, filename + '.xlsx')
     
-    # Записываем все наши статьи в json:
-    with open(filename + '.json', 'w', encoding='UTF-8') as file:
-        json.dump(data_list[::-1], file, ensure_ascii=False, indent=4)
-    # Также записываем содержимое нашего JSON-файла в отдельный временный файл:
-#    with open('TEMP.json', 'r+', encoding='UTF-8') as f:
-#        json_data = json.loads(f.read())
-#        print(json_data)
-        #for i_1 in data_list:
-            #for i_2 in file:
-                #if i != 
-#        if len(data_list) == len(json_data):
-#            print(True)
-        #json.dump(data_list[::-1], file, ensure_ascii=False, indent=4)
+#    # Записываем все наши статьи (ВКЛЮЧАЯ НОВЫЕ) в файл TEMP.json:
+#    with open(path, 'w', encoding='UTF-8') as file:
+#        json.dump(data_list[::-1], file, ensure_ascii=False, indent=4)
+        
+     return data_list
 
 
 
