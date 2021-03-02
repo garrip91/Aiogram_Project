@@ -33,6 +33,9 @@ def get_page_data(filename_html: str, filename: str):
     for card in cards:
         # Cоздаем словарь в виде - {'title', 'desc'(при его наличии), 'url'}, куда добавляем заголовки, описания и ссылки соответственно:
         data_dict = {}
+        
+#        # Добавляем id к каждой записи:
+#        data_id = 1
 
         # Находим заголовок статьи по атрибуту соответствующего html-тега С ПРИМЕНЕНИЕМ ФУНКЦИИ УДАЛЕНИЯ ЛИШНИХ ПРОБЕЛОВ И ПЕРЕНОСОВ СТРОК и добавляем его в наш словарь:
         data_dict['title'] = del_space(card.find('div', class_='card-content__title').find('span').text)
