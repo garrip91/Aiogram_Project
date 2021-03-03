@@ -10,19 +10,19 @@ with open(path, 'r', encoding='UTF-8') as f:
     path_json_read = json.load(f)
     for i in path_json_read:
         path_dict = {}
-        #========================#
+        #================================#
         path_dict['id'] = path_dict_id
         path_dict_id += 1
-        #========================#
+        #================================#
         path_dict['title'] = i['title']
-        #========================#
+        #================================#
         try:
             path_dict['desc'] = i['desc']
         except KeyError:
             pass
-        #========================#
+        #================================#
         path_dict['url'] = i['url']
-        #========================#
+        #================================#
         path_list.append(path_dict)
 #print(path_list[3])
 
