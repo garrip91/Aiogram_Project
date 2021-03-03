@@ -1,41 +1,48 @@
 import json
 
+from jsondiff import diff
+
 path = 'DATA.json'
 
 
 
-data_example_for_add = [{
-                        'title': 'Лидер – кто может им стать и что для этого нужно',
-                        'desc': None,
-                        'url': 'https://zen.yandex.ru/media/id/601d76de40f32972e4d8ce59/lider--kto-mojet-im-stat-i-chto-dlia-etogo-nujno-603d289abdd71022a29d3b10'
+data_example_for_add_list = [{
+                        'title': 'Энергия - зачем она нужна, как её создавать, сохранять и эффективно тратить',
+                        'desc': 'Энергия пронизывает пространство, нас и все вокруг. Зная, как управлять энергией, вы можете строить',
+                        'url': 'https://zen.yandex.ru/media/id/601d76de40f32972e4d8ce59/energiia-zachem-ona-nujna-kak-ee-sozdavat-sohraniat-i-effektivno-tratit-60366ad9084cc3452484ad62'
                        }]
+                       
+# Test:
+print(diff(path, data_example_for_add_list))
 
-# ====== Заполняем основной список данными из JSON: ====== #
-# ======================================================== #
-json_list = []
-with open(path, 'r', encoding='UTF-8') as f:
-    path_json_read = json.load(f)
-    for i in path_json_read:
-        json_list.append(i)       
-# ======================================================== #        
-
-# ...и объявляем переменную с первым значением ID #
-new_id = json_list[-1]['id'] + 1
-# =============================================== #
+# ====== Объявляем функцию заполнения основного списка данными из JSON: ====== #
+def json_list_func(path=path):
+    json_list = []
+    with open(path, 'r', encoding='UTF-8') as f:  
+        path_json_read = json.load(f)
+        for i in path_json_read:
+            json_list.append(i)  
+    return json_list
+#print(json_list_func()[0])
+# ============================================================================ #
 
 # Добавляем всем новым элементам по ID-ключу и сами элементы в виде словарей добавляем в новый список: #
-new_list = []
-for i in data_example_for_add:
-    path_dict = {}
-    path_dict['id'] = new_id
-    path_dict['title'] = i['title']
-    try:
-        path_dict['desc'] = i['desc']
-    except KeyError:
-        pass
-    path_dict['url'] = i['url']
-    new_list.append(path_dict)
-    new_id += 1
+def new_list_func(data_example_for_add_list=data_example_for_add_list):
+    new_list = []
+    new_id = json_list_func()[-1]['id'] + 1
+    for i in data_example_for_add_list:
+        dict_in_new_list = {}
+        dict_in_new_list['id'] = new_id
+        dict_in_new_list['title'] = i['title']
+        try:
+            dict_in_new_list['desc'] = i['desc']
+        except KeyError:
+            pass
+        dict_in_new_list['url'] = i['url']
+        new_list.append(dict_in_new_list)
+        new_id += 1
+    return new_list
+#print(new_list_func())
 # ==================================================================================================== #
 
 # Проверяем наши списки на предмет наличия одинаковых элементов и в случае их отсутствия добавляем элементы из нового списка в основной: #
@@ -47,9 +54,26 @@ for i in json_list.items():
         json_dicts_list.append()
 '''
 #json_tuples_list = [tuple(k,v) for k,v in i.items() for i in json_list]
-result = [print(F"\n{tuple((i,))}\n") for i in json_list]
+#result = [F"\n{tuple((i))}\n" for i in data_example_for_add_list]
 #result=list(set(json_list)-set(new_list))
-print(result)
+#print(result)
+def check_lists_func(json_list_func=json_list_func(), new_list_func=new_list_func()):
+    # Преобразовываем наш основной список в список кортежей кортежей:
+    json_list_new = []
+    for i in json_list_func:
+        json_list_new.append(tuple(i.items()))
+    
+    # Преобразовываем наш новый список в список кортежей кортежей:    
+    new_list_new = []
+    for i in new_list_func:
+        new_list_new.append(tuple(i.items()))
+        
+    # Сравниваем наши полученные кортежи (списки):
+    result = list(set(json_list_new) & set(new_list_new))
+            
+    #return (json_list_new[0], new_list_new[0])
+    return result
+#print(check_lists_func())
 # ====================================================================================================================================== #
 
 '''
@@ -58,5 +82,3 @@ with open(path, 'w', encoding='UTF-8') as f:
 '''
 #result = [x for x in json_list + temp_list if x not in json_list or x not in temp_list]
 #print(result)
-
-# tuple(x for x in some_list)
