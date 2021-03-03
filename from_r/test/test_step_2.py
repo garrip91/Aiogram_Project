@@ -3,17 +3,49 @@ import json
 from jsondiff import diff
 
 path = 'DATA.json'
+# ================== #
+temp = 'TEMP.json'
 
+################# https://github.com/xlwings/jsondiff #################
+json1 = []
+with open(path, 'r', encoding='UTF-8') as f:  
+    path_json_read = json.load(f)
+    for i in path_json_read:
+        json1.append(i)
+json2 = []
+with open(temp, 'r', encoding='UTF-8') as f:  
+    temp_json_read = json.load(f)
+    for i in temp_json_read:
+        json2.append(i)
+    
+#diff({'a': 1, 'b': 2}, {'b': 3, 'c': 4})
+# print(diff(json1, json2))
+#diff({'a': 1, 'b': 2}, {'b': 3, 'c': 4}, syntax='explicit')
+# print(diff(json1, json2, syntax='explicit'))
+#diff({'a': 1, 'b': 2}, {'b': 3, 'c': 4}, syntax='symmetric')
+print(diff(json1, json2, syntax='symmetric'))
+#print(diff('["a", "b", "c"]', '["a", "c", "d"]', load=True, dump=True))
+# print(diff(json1, json2, dump=True))
+#######################################################################
 
-
-data_example_for_add_list = [{
-                        'title': 'Энергия - зачем она нужна, как её создавать, сохранять и эффективно тратить',
-                        'desc': 'Энергия пронизывает пространство, нас и все вокруг. Зная, как управлять энергией, вы можете строить',
-                        'url': 'https://zen.yandex.ru/media/id/601d76de40f32972e4d8ce59/energiia-zachem-ona-nujna-kak-ee-sozdavat-sohraniat-i-effektivno-tratit-60366ad9084cc3452484ad62'
-                       }]
-                       
+data_example_for_add_list = [
+                                {
+                                    'title': 'Лидер – кто может им стать и что для этого нужно',
+                                    'desc': None,
+                                    'url':'https://zen.yandex.ru/media/id/601d76de40f32972e4d8ce59/lider--kto-mojet-im-stat-i-chto-dlia-etogo-nujno-603d289abdd71022a29d3b10'
+                                },
+                                {
+                                    'title': 'Гармония – как найти себя и что для это нужно',
+                                    'desc': None,
+                                    'url':'https://zen.yandex.ru/media/id/601d76de40f32972e4d8ce59/garmoniia--kak-naiti-sebia-i-chto-dlia-eto-nujno-603e2ee15f6b8d26fec3e4af'
+                                }
+                            ]
+'''                       
+with open(temp, 'w', encoding='UTF-8') as f:  
+    json.dump(data_list[::-1], f, ensure_ascii=False, indent=4)
+'''                       
 # Test:
-print(diff(path, data_example_for_add_list))
+#print(diff(path, data_example_for_add_list))
 
 # ====== Объявляем функцию заполнения основного списка данными из JSON: ====== #
 def json_list_func(path=path):
@@ -44,6 +76,14 @@ def new_list_func(data_example_for_add_list=data_example_for_add_list):
     return new_list
 #print(new_list_func())
 # ==================================================================================================== #
+
+# Добавляем готовые новые данные (с ключами ID) во второй JSON-файл:
+def add_to_temp_json(temp=temp, new_list_func=new_list_func):
+    with open(temp, 'w', encoding='UTF-8') as f:    
+        json.dump(new_list_func(), f, ensure_ascii=False, indent=4)
+    return "Ваши данные успешно загружены!"
+#print(add_to_temp_json())
+# ================================================================ #
 
 # Проверяем наши списки на предмет наличия одинаковых элементов и в случае их отсутствия добавляем элементы из нового списка в основной: #
 '''
