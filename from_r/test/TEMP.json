@@ -1,14 +1,13 @@
 [
     {
+        "desc": null,
         "id": 38,
         "title": "Лидер – кто может им стать и что для этого нужно",
-        "desc": null,
         "url": "https://zen.yandex.ru/media/id/601d76de40f32972e4d8ce59/lider--kto-mojet-im-stat-i-chto-dlia-etogo-nujno-603d289abdd71022a29d3b10"
     },
     {
-        "id": 39,
-        "title": "Гармония – как найти себя и что для это нужно",
-        "desc": null,
-        "url": "https://zen.yandex.ru/media/id/601d76de40f32972e4d8ce59/garmoniia--kak-naiti-sebia-i-chto-dlia-eto-nujno-603e2ee15f6b8d26fec3e4af"
+        "title": "Эмоции – что делать, чтобы оставаться самим собой",
+        "desc": "Существуют эмоции, которые мешают нам быть с другими самим собой. Для",
+        "url": "https://zen.yandex.ru/media/id/601d76de40f32972e4d8ce59/emocii--chto-delat-chtoby-ostavatsia-samim-soboi-603ba7ed82fc21754dab427f"
     }
 ]
