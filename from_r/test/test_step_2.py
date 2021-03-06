@@ -10,14 +10,13 @@ temp = 'TEMP.json'
 
 data_example_for_add_list = [
                                 {
-                                    'title': 'Лидер – кто может им стать и что для этого нужно',
-                                    'desc': None,
-                                    'url':'https://zen.yandex.ru/media/id/601d76de40f32972e4d8ce59/lider--kto-mojet-im-stat-i-chto-dlia-etogo-nujno-603d289abdd71022a29d3b10'
+                                    'title': "Мотивация - это мотивация!",
+                                    'desc': "В прошлой статье мы говорили о soft skills и о том, какие навыки нужно",
+                                    'url': "https://zen.yandex.ru/media/id/601d76de40f32972e4d8ce59/motivaciia-kak-preodolet-len-i-usvoit-novuiu-informaciiu-chtoby-stat-uspeshnym-60379764109f4c102e816a54"
                                 },
                                 {
-                                    'title': 'Гармония – как найти себя и что для это нужно',
-                                    'desc': None,
-                                    'url':'https://zen.yandex.ru/media/id/601d76de40f32972e4d8ce59/garmoniia--kak-naiti-sebia-i-chto-dlia-eto-nujno-603e2ee15f6b8d26fec3e4af'
+                                    'title': "Страх - это страх!",
+                                    'url': "https://zen.yandex.ru/media/id/601d76de40f32972e4d8ce59/strah-pochemu-on-meshaet-na-puti-k-mechte-6039340f49b4e728905beb55"
                                 }
                             ]
 '''
