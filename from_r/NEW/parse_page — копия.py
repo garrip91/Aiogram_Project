@@ -28,10 +28,15 @@ CHANNEL_ID = CHANNEL_ID
 BOT_TOKEN = garrip91_TOKEN
 
 
+
+opts = webdriver.ChromeOptions()
+opts.add_argument('--no-sandbox')
+opts.add_argument('--disable-dev-shm-usage')
+
 # Функция получения HTML-кода страницы
 def get_whole_page(page_link: str, filename: str):
     # Открываем chrome
-    with webdriver.Chrome() as chrome:
+    with webdriver.Chrome(options=opts) as chrome:
 		
         # Переходим на страницу канала в Дзене
         chrome.get(page_link)
